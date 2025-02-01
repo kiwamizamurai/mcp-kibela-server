@@ -76,3 +76,9 @@ Get content and comments of a specific note
 - Input:
   - `id` (string): Note ID
 - Returns: Note content in HTML format and recent comments
+
+## Reference
+1. https://modelcontextprotocol.info/docs/guide/quickstart/
+2. https://github.com/modelcontextprotocol/quickstart-resources
+3. https://docs.cursor.com/advanced/model-context-protocol
+4. https://modelcontextprotocol.io/introduction
