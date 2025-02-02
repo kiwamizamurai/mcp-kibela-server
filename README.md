@@ -27,7 +27,7 @@ Add to your `claude_desktop_config.json`:
   "mcpServers": {
     "kibela": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-kibela"],
+      "args": ["-y", "@kiwamizamurai/server-kibela"],
       "env": {
         "KIBELA_TEAM": "your-team",
         "KIBELA_TOKEN": "your-token"
@@ -47,7 +47,7 @@ Add to your `~/.cursor/config.json`:
     "servers": {
       "kibela": {
         "command": "node",
-        "args": ["dist/index.js"],
+        "args": ["dist/src/index.js"],
         "env": {
           "KIBELA_TEAM": "your-team",
           "KIBELA_TOKEN": "your-token"
