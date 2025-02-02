@@ -4,6 +4,7 @@ MCP server implementation for Kibela API integration, enabling LLMs to interact 
 
 <img width="320" alt="Example" src="https://github.com/user-attachments/assets/eeed8f45-eb24-456d-bb70-9e738aa1bfb3" />
 
+<a href="https://glama.ai/mcp/servers/m21nkeig1p"><img width="380" height="200" src="https://glama.ai/mcp/servers/m21nkeig1p/badge" alt="Kibela Server MCP server" /></a>
 
 ## Features
 
