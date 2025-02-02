@@ -1,4 +1,5 @@
 # Kibela MCP Server
+[![smithery badge](https://smithery.ai/badge/@kiwamizamurai/mcp-kibela-server)](https://smithery.ai/server/@kiwamizamurai/mcp-kibela-server)
 
 MCP server implementation for Kibela API integration, enabling LLMs to interact with Kibela content.
 
