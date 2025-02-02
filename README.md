@@ -27,7 +27,7 @@ Add to your `claude_desktop_config.json`:
   "mcpServers": {
     "kibela": {
       "command": "npx",
-      "args": ["-y", "@kiwamizamurai/server-kibela"],
+      "args": ["-y", "@kiwamizamurai/mcp-kibela-server"],
       "env": {
         "KIBELA_TEAM": "your-team",
         "KIBELA_TOKEN": "your-token"
@@ -71,7 +71,7 @@ Search Kibela notes with given query
 ### kibela_get_my_notes
 Get your latest notes from Kibela
 - Input:
-  - `limit` (number, optional): Number of notes to fetch (default: 15, max: 50)
+  - `limit` (number, optional): Number of notes to fetch (default: 15)
 - Returns: List of your latest notes
 
 ### kibela_get_note_content
