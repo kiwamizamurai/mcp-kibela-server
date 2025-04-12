@@ -1,6 +1,6 @@
 import { SSEServerTransport } from "@modelcontextprotocol/sdk/server/sse.js";
-import express from "express";
 import cors from "cors";
+import express from "express";
 import { createServer } from "./kibela.js";
 
 const app = express();
