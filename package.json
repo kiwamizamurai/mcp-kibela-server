@@ -1,11 +1,14 @@
 {
-  "name": "@modelcontextprotocol/server-kibela",
-  "version": "0.1.0",
+  "name": "@kiwamizamurai/mcp-kibela-server",
+  "version": "1.0.0",
   "description": "MCP server for Kibela API integration",
   "license": "MIT",
   "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "bin": {
-    "mcp-server-kibela": "dist/src/index.js"
+    "mcp-kibela-server": "dist/src/index.js"
   },
   "files": [
     "dist"
@@ -23,7 +26,9 @@
     "prepare": "npm run build",
     "watch": "tsc --watch",
     "start": "node dist/src/index.js",
-    "start:sse": "node dist/src/sse.js"
+    "start:sse": "node dist/src/sse.js",
+    "lint": "biome check .",
+    "lint:fix": "biome check --apply ."
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.0.1",
@@ -32,7 +37,8 @@
     "cors": "^2.8.5"
   },
   "devDependencies": {
-    "@types/node": "^22",
+    "@biomejs/biome": "1.5.3",
+    "@types/node": "^20",
     "@types/express": "^4.17.21",
     "@types/cors": "^2.8.17",
     "shx": "^0.3.4",
