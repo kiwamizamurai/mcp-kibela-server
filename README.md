@@ -32,28 +32,26 @@ MCP server implementation for Kibela API integration, enabling LLMs to interact 
 - `KIBELA_TEAM`: Your Kibela team name (required)
 - `KIBELA_TOKEN`: Your Kibela API token (required)
 
-### Usage with Claude Desktop
-
-Add to your `claude_desktop_config.json`:
-
-```json
-{
-  "mcpServers": {
-    "kibela": {
-      "command": "npx",
-      "args": ["-y", "@kiwamizamurai/mcp-kibela-server"],
-      "env": {
-        "KIBELA_TEAM": "your-team",
-        "KIBELA_TOKEN": "your-token"
-      }
-    }
-  }
-}
-```
-
 ## Cursor Integration
 
 Add to your `~/.cursor/mcp.json`:
+
+```json
+{
+    "mcpServers": {
+        "kibela": {
+            "command": "npx",
+            "args": ["-y", "@kiwamizamurai/mcp-kibela-server"],
+            "env": {
+                "KIBELA_TEAM": "YOUR_TEAM_NAME",
+                "KIBELA_TOKEN": "YOUR_TOKEN"
+            }
+        }
+    }
+}
+```
+
+If you want to use docker instead
 
 ```json
 {
@@ -185,7 +183,16 @@ For local development, update your `~/.cursor/mcp.json`:
 
 ### Docker Development
 
-Build and run locally:
+With mcp inspector
+
+```bash
+npx @modelcontextprotocol/inspector node ./dist/src/index.js
+```
+
+and set environemtns
+
+
+or Build and run locally:
 
 ```bash
 docker build -t mcp-kibela-server .
@@ -217,3 +224,8 @@ Then use this configuration:
 }
 ```
 For SSE transport, ensure the server URL is set to: `http://localhost:3000/sse`
+
+
+# Other products
+
+- [vscode extension for kibela](https://marketplace.visualstudio.com/items?itemName=kiwamizamurai-vscode.kibela-vscode)
