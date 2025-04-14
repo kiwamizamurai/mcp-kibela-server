@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches: [ main ]
+    tags: [ 'v*.*.*' ]
   pull_request:
     branches: [ main ]
 
@@ -42,6 +43,9 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             type=raw,value=latest
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
