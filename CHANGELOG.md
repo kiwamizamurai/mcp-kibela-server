@@ -5,7 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.0] - 2024-03-26
+## [1.1.0] - 2025-04-17
+
+### Added
+
+- Optional image data inclusion in note content responses
+- Support for excluding image data URLs for better performance
+- Added `include_image_data` parameter to note retrieval endpoints
+
+## [1.0.0] - 2025-04-12
 
 ### Added
 - Initial release with Kibela API integration

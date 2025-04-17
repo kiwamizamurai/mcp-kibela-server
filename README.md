@@ -10,9 +10,6 @@ MCP server implementation for Kibela API integration, enabling LLMs to interact 
 
 <a href="https://glama.ai/mcp/servers/m21nkeig1p"><img width="380" height="200" src="https://glama.ai/mcp/servers/m21nkeig1p/badge" alt="Kibela Server MCP server" /></a>
 
-> [!NOTE]
-> When retrieving large notes, you may see the message "Your conversation is too long. Please try creating a new conversation or shortening your messages." This is expected behavior and not an error - simply start a new chat to continue.
-
 ## Features
 
 - Search notes with advanced filters
@@ -183,9 +180,7 @@ For local development, update your `~/.cursor/mcp.json`:
 }
 ```
 
-### Docker Development
-
-With mcp inspector
+### MCP inspector
 
 ```bash
 npx @modelcontextprotocol/inspector node ./dist/src/index.js
@@ -194,7 +189,9 @@ npx @modelcontextprotocol/inspector node ./dist/src/index.js
 and set environemtns
 
 
-or Build and run locally:
+### Docker
+
+Build and run locally:
 
 ```bash
 docker build -t mcp-kibela-server .
