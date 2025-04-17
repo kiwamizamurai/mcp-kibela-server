@@ -347,13 +347,7 @@ export const createServer = () => {
                     mimeType
                   }
                 }`
-            : `attachments(first: 3) {
-                  nodes {
-                    id
-                    name
-                    mimeType
-                  }
-                }`;
+            : "";
 
           const operation = `
             query GetNote($id: ID!) {
@@ -695,13 +689,7 @@ export const createServer = () => {
                     mimeType
                   }
                 }`
-            : `attachments(first: 3) {
-                  nodes {
-                    id
-                    name
-                    mimeType
-                  }
-                }`;
+            : "";
 
           const operation = `            query GetNoteFromPath($path: String!) {
               noteFromPath(path: $path) {
