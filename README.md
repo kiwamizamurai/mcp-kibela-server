@@ -100,6 +100,7 @@ Get your latest notes from Kibela
 Get content and comments of a specific note
 - Input:
   - `id` (string): Note ID
+  - `include_image_data` (boolean, optional): Whether to include image data URLs in the response (default: false)
 - Returns: Full note content including HTML, comments, attachments, groups, folders and more
 
 ### kibela_get_groups
@@ -153,6 +154,7 @@ Get your recently viewed notes
 Get note content by its path or URL
 - Input:
   - `path` (string): Note path (e.g. '/group/folder/note') or full Kibela URL (e.g. 'https://team.kibe.la/notes/123')
+  - `include_image_data` (boolean, optional): Whether to include image data URLs in the response (default: false)
 - Returns: Full note content including HTML, comments, attachments, groups, folders and more
 
 ## Local Development

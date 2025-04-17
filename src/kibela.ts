@@ -64,6 +64,11 @@ const GET_NOTE_CONTENT_TOOL: Tool = {
     type: "object",
     properties: {
       id: { type: "string", description: "Note ID" },
+      include_image_data: {
+        type: "boolean",
+        description: "Whether to include image data URLs in the response",
+        default: false,
+      },
     },
     required: ["id"],
   },
@@ -170,6 +175,11 @@ const GET_NOTE_FROM_PATH_TOOL: Tool = {
     type: "object",
     properties: {
       path: { type: "string", description: "Note path (e.g. 'https://${process.env.KIBELA_TEAM}.kibe.la/notes/5154')" },
+      include_image_data: {
+        type: "boolean",
+        description: "Whether to include image data URLs in the response",
+        default: false,
+      },
     },
     required: ["path"],
   },
@@ -326,6 +336,19 @@ export const createServer = () => {
 
         case "kibela_get_note_content": {
           const id = args.id as string;
+          const includeImageData = (args.include_image_data as boolean) || false;
+
+          const attachmentsFragment = includeImageData
+            ? `attachments(first: 3) {
+                  nodes {
+                    id
+                    name
+                    dataUrl
+                    mimeType
+                  }
+                }`
+            : "";
+
           const operation = `
             query GetNote($id: ID!) {
               note(id: $id) {
@@ -338,14 +361,7 @@ export const createServer = () => {
                 url
                 path
                 isLikedByCurrentUser
-                attachments(first: 3) {
-                  nodes {
-                    id
-                    name
-                    dataUrl
-                    mimeType
-                  }
-                }
+                ${attachmentsFragment}
                 author {
                   id
                   account
@@ -660,8 +676,20 @@ export const createServer = () => {
 
         case "kibela_get_note_from_path": {
           const rawPath = args.path as string;
+          const includeImageData = (args.include_image_data as boolean) || false;
           // Extract path from URL if full URL is provided
           const path = rawPath.includes("kibe.la/notes/") ? `/notes/${rawPath.split("/notes/")[1]}` : rawPath;
+
+          const attachmentsFragment = includeImageData
+            ? `attachments(first: 3) {
+                  nodes {
+                    id
+                    name
+                    dataUrl
+                    mimeType
+                  }
+                }`
+            : "";
 
           const operation = `            query GetNoteFromPath($path: String!) {
               noteFromPath(path: $path) {
@@ -674,14 +702,7 @@ export const createServer = () => {
                 url
                 path
                 isLikedByCurrentUser
-                attachments(first: 3) {
-                  nodes {
-                    id
-                    name
-                    dataUrl
-                    mimeType
-                  }
-                }
+                ${attachmentsFragment}
                 author {
                   id
                   account
