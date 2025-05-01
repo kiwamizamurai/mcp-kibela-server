@@ -118,8 +118,8 @@ const GET_FOLDER_NOTES_TOOL: Tool = {
       limit: {
         type: "number",
         description: "Number of notes to fetch (default 100)",
-        default: 100
-      }
+        default: 100,
+      },
     },
     required: ["folderId"],
   },
