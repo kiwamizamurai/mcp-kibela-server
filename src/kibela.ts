@@ -115,6 +115,11 @@ const GET_FOLDER_NOTES_TOOL: Tool = {
     type: "object",
     properties: {
       folderId: { type: "string", description: "Folder ID" },
+      limit: {
+        type: "number",
+        description: "Number of notes to fetch (default 100)",
+        default: 100
+      }
     },
     required: ["folderId"],
   },
@@ -521,12 +526,12 @@ export const createServer = () => {
         }
 
         case "kibela_get_folder_notes": {
-          const { folderId } = args as { folderId: string };
+          const { folderId, limit = 100 } = args as { folderId: string; limit?: number };
 
           const operation = `
-            query GetFolderNotes($folderId: ID!) {
+            query GetFolderNotes($folderId: ID!, $limit: Int!) {
               folder(id: $folderId) {
-                notes(first: 10, active: true, orderBy: { field: CONTENT_UPDATED_AT, direction: DESC }) {
+                notes(first: $limit, active: true, orderBy: { field: CONTENT_UPDATED_AT, direction: DESC }) {
                   nodes {
                     id
                     title
@@ -542,7 +547,7 @@ export const createServer = () => {
             }
           `;
 
-          const response = await client.request<FolderNotesResponse>(operation, { folderId });
+          const response = await client.request<FolderNotesResponse>(operation, { folderId, limit });
           return {
             content: [
               {
