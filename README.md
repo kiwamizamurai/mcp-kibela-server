@@ -124,6 +124,7 @@ Get notes in a group that are not attached to any folder
 Get notes in a folder
 - Input:
   - `folderId` (string): Folder ID
+  - `limit` (number, optional): Number of notes to fetch (default: 100)
 - Returns: List of notes with author information, sorted by last update time
 
 ### kibela_get_users

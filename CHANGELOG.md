@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.1] - 2025-05-01
+
+### Added
+
+- Added `limit` parameter to kibela_get_folder_notes to control the number of notes returned (default: 100)
+
 ## [1.1.0] - 2025-04-17
 
 ### Added

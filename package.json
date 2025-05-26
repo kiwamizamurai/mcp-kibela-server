@@ -1,6 +1,6 @@
 {
   "name": "@kiwamizamurai/mcp-kibela-server",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "MCP server for Kibela API integration",
   "license": "MIT",
   "type": "module",
@@ -12,6 +12,14 @@
   },
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "kibela",
+    "documentation",
+    "API",
+    "server",
+    "integration",
+    "mcp"
   ],
   "repository": {
     "type": "git",
