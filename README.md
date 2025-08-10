@@ -8,9 +8,10 @@
 
 MCP server implementation for Kibela API integration, enabling LLMs to interact with Kibela content.
 
-<img width="320" alt="Example" src="https://github.com/user-attachments/assets/eeed8f45-eb24-456d-bb70-9e738aa1bfb3" />
+<img width="320" alt="Example" src="https://github.com/user-attachments/assets/eeed8f45-eb24-456d-bb70-9e738aa1bfb3" /><a href="https://glama.ai/mcp/servers/m21nkeig1p"><img width="380" height="200" src="https://glama.ai/mcp/servers/m21nkeig1p/badge" alt="Kibela Server MCP server" /></a>
 
-<a href="https://glama.ai/mcp/servers/m21nkeig1p"><img width="380" height="200" src="https://glama.ai/mcp/servers/m21nkeig1p/badge" alt="Kibela Server MCP server" /></a>
+> [!TIP]
+> This extension performs GraphQL schema introspection using the buildClientSchema, getIntrospectionQuery, and printSchema functions from the graphql package to reverse engineer Kibela's API. [For more details, see her](https://github.com/kiwamizamurai/vscode-kibela/blob/main/reverse_engineering/main.ts)
 
 ## Features
 
