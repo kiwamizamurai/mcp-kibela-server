@@ -1,12 +1,8 @@
 # Kibela MCP Server
-![NPM Version](https://img.shields.io/npm/v/%40kiwamizamurai%2Fmcp-kibela-server)
 ![NPM Downloads](https://img.shields.io/npm/dm/%40kiwamizamurai%2Fmcp-kibela-server)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 [![Trust Score](https://archestra.ai/mcp-catalog/api/badge/quality/kiwamizamurai/mcp-kibela-server)](https://archestra.ai/mcp-catalog/kiwamizamurai__mcp-kibela-server)
 [![smithery badge](https://smithery.ai/badge/@kiwamizamurai/mcp-kibela-server)](https://smithery.ai/server/@kiwamizamurai/mcp-kibela-server)
-[![Build and Push Docker Image](https://github.com/kiwamizamurai/mcp-kibela-server/actions/workflows/docker.yml/badge.svg?branch=main)](https://github.com/kiwamizamurai/mcp-kibela-server/actions/workflows/docker.yml)
-[![Lint](https://github.com/kiwamizamurai/mcp-kibela-server/actions/workflows/lint.yml/badge.svg?branch=main)](https://github.com/kiwamizamurai/mcp-kibela-server/actions/workflows/lint.yml)
 
 MCP server implementation for Kibela API integration, enabling LLMs to interact with Kibela content.
 
