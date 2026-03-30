@@ -23,6 +23,10 @@ MCP server implementation for Kibela API integration, enabling LLMs to interact 
 - View recently viewed notes
 - Get notes by path
 
+## Hosted deployment
+
+A hosted deployment is available on [Fronteir AI](https://fronteir.ai/mcp/kiwamizamurai-mcp-kibela-server).
+
 ## Configuration
 
 ### Environment Variables
