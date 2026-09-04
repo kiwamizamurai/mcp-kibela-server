@@ -2,7 +2,7 @@
 ![NPM Downloads](https://img.shields.io/npm/dm/%40kiwamizamurai%2Fmcp-kibela-server)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Trust Score](https://archestra.ai/mcp-catalog/api/badge/quality/kiwamizamurai/mcp-kibela-server)](https://archestra.ai/mcp-catalog/kiwamizamurai__mcp-kibela-server)
-[![smithery badge](https://smithery.ai/badge/@kiwamizamurai/mcp-kibela-server)](https://smithery.ai/server/@kiwamizamurai/mcp-kibela-server)
+[![LightNow capabilities](https://lightnow.ai/badge/io.github.kiwamizamurai/mcp-kibela-server)](https://lightnow.ai/servers/io.github.kiwamizamurai/mcp-kibela-server)
 
 MCP server implementation for Kibela API integration, enabling LLMs to interact with Kibela content.
 
